@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="About.css" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script src="about.js"></script>
+  
+
+
+    <title>Park's Website</title>
+</head>
+<body>
+        <style>
+                .figure-image {
+                    visibility: hidden;
+                }
+            
+                .fadeIn {
+                    -webkit-animation: animat_show 0.8s;
+                    animation: animat_show 0.8s;
+                    visibility: visible !important;
+                }
+            
+                @-webkit-keyframes animat_show{
+                    0%{opacity:0}
+                    100%{opacity:1}
+                }
+            </style>
+        <script>
+                function showImages(el) {
+                    var windowHeight = jQuery( window ).height();
+                    $(el).each(function(){
+                        var thisPos = $(this).offset().top;
+            
+                        var topOfWindow = $(window).scrollTop();
+                        if (topOfWindow + windowHeight - 200 > thisPos ) {
+                            $(this).addClass("fadeIn");
+                        }
+                    });
+                }
+            
+                
+                $(document).ready(function(){
+                        showImages('.figure-image');
+                });
+            
+                
+                $(window).scroll(function() {
+                        showImages('.figure-image');
+                });
+            </script>
+    
+    <nav id="mainnavbar" class="navbar navbar-expand-xl bg-light navbar-light py-2 pl-2 mb-11 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">H.J Park <span id="spacing"> | </span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="About.html">About <span class="sr-only">(current)</span></a>
+                </li>
+                
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+                </li>
+                
+              </ul>
+              
+            </div>
+            </div>
+          </nav>
+
+          <div id="about" class="about-section">
+            <div class="container text-center">
+                <h2 class="section-title">About Me</h2>
+                <p id="Park"><img src="pics/P.png" alt="P"></p>
+                <p class="intro">Hello! Welcome to my website! My name is H.J Park. I graduated with a bachelor's degree in social work from La Trobe University, and now I am currently working at Monash University in Melbourne.<br><br> I enjoy drawing/designing random stuff as well as coding in Javascript just as sheer hobbies! Down below, here are some examples of languages/programmes that I am familiar with. </p>
+                <ul class="technologies list-inline">
+                    <li class="list-inline-item animated zoomIn"><img src="pics/html.png" alt="HTML5"></li>
+                    <li class="list-inline-item animated zoomIn"><img src="pics/css.png" alt="CSS3"></li>
+                    <li class="list-inline-item animated zoomIn"><img src="pics/bootstrap.png" alt="Bootstrap"></li>
+                    <li class="list-inline-item animated zoomIn" id="javscript"><img src="pics/javascript.png" alt="Javascript"></li>
+                    <li class="list-inline-item animated zoomIn" id="clipstudio"><img src="pics/clipstudio.png" alt="Clipstudio"></li>
+                </ul>
+            
+
+            <div id="int" class="history">
+                <div class="container text-center">
+                    <h2 id="offer">A Brief History Of Me </h2>
+                    <img class="history" src="pics/history.png" alt="image">
+
+                    </div>
+            </div>
+            
+            <div id="int" class="int-section">
+                <div class="container text-center">
+                    <h2 id="offer">Things I Do </h2>
+                    </div>
+            </div>
+                <div class="items-wrapper row">
+                    <div class="item col-md-4 col-12">
+                        <div class="item-inner">
+                            <div class="figure-holder">
+                                <img class="figure-image" src="pics/word.png" alt="image">
+                            </div>
+                            <h3 class="item-title">Straight Outta Duolingo</h3>
+                            <div class="item-desc">
+                                Able to write & speak Korean and English. Plus a bit of Japanese since I managed to pick up some when I was in High School.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-md-4 col-12">
+                        <div class="item-inner">
+                            <div class="figure-holder">
+                                <img class="figure-image" src="pics/coding.png" alt="image">
+                            </div>
+                            <h3 class="item-title">Front-End Coding</h3>
+                            <div class="item-desc">
+                                As a self-tought programmer, I really enjoy coding in HTML5 and CSS. I also create random web apps on a regular basis using Javascript to hone my Javascript level.  </div><!--//item-desc-->
+                        </div>
+                    </div>
+                    <div class="item col-md-4 col-12">
+                        <div class="item-inner">
+                            <div class="figure-holder">
+                                <img class="figure-image" src="pics/brush.png" alt="image">
+                            </div>
+                            <h3 class="item-title">Desire Designing</h3>
+                            <div class="item-desc">
+                                Occasionally Draw things using my iPad. Also able to utilise Clip Studio which is basically similar to Adobe Photoshop/Illustrator but better in every respect.</div><!--//item-desc-->
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <a href="contact.html">
+                <button type="button" class="btn btn-primary btn-lg btn-block">Interested? Go To Contact Page!</button>
+                </a>
+                <br>
+
+            </div>
+        </div>
+</body>
+</html>
